@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="es">
+	<head>
+		<meta charset='utf-8'>
+		<title>Threejs App</title>
+		<style>
+			body {
+				body {
+				margin: 0px;
+				overflow: hidden;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			}
+		</style>
+		<style>
+			body {
+				background-color: #000;
+				margin: 0px;
+				overflow: hidden;
+			}
+		
+			#welcomeScreen {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background-color: rgba(0, 0, 0, 0.7);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color: yellow;
+				z-index: 10;
+			}
+		
+			#welcomeTitle {
+				font-size: 72px;
+				font-family: 'Arial', sans-serif;
+				text-align: center;
+				animation: pulse 2s infinite;
+			}
+		
+			#welcomeMessage {
+				font-size: 24px;
+				font-family: 'Arial', sans-serif;
+				text-align: center;
+				margin-top: 20px;
+				color: white;
+				animation: fadeInOut 3s infinite;
+			}
+
+			#welcomeIntro {
+            font-size: 20px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeInOut 3s infinite;
+        	}
+		
+			@keyframes pulse {
+				0% { transform: scale(1); }
+				50% { transform: scale(1.2); }
+				100% { transform: scale(1); }
+			}
+		
+			@keyframes fadeInOut {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0.5; }
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Contenedor del app -->
+		<div id="container"></div>
+
+		<!-- Pantalla de bienvenida -->
+		<div id="welcomeScreen">
+			<div id="welcomeTitle">¡Bienvenido a Pac-Man 3D!</div>
+			<div id="welcomeIntro">
+				Tu misión es simple: <strong>¡Comerte todas las bolitas y evitar a los fantasmas!</strong> Tienes <strong>3 vidas</strong>, así que elige tus movimientos sabiamente. Usa las <strong>flechas del teclado</strong> para moverte y gira la cámara con <strong>A</strong> (Izq.) y <strong>D</strong> (Der.). <br><br>
+				Si necesitas una ayuda, presiona <strong>S</strong> para visualizar el minimapa del laberinto. <br><br>
+				Explora los puntos de teletransporte estratégicamente ubicados: uno en el centro-arriba, centro-abajo, centro-izquierda y centro-derecha, ¡y escapa rápidamente cuando lo necesites! <br><br>
+			</div>
+			<div id="welcomeMessage">Presiona Enter para empezar</div>
+		</div>
+
+
+		<!-- Scripts de biblioteca -->
+		<script src="lib/three.min_r140.js"></script>
+		<script src="lib/OrbitControls.js"></script>
+
+		<script src="lib/stats.min.js"></script>
+		<script src="lib/dat.gui.min.js"></script>
+
+		<script src="lib/lil-gui_0.16.1.js"></script>
+		<script src="lib/lil-gui.module.min.js"></script>
+		<script src="lib/tween_18.js"></script>
+		<script src="lib/tween.module.min.js"></script>
+
+		<script src="js/pacman.js"></script>
+
+	</body>
+</html>
